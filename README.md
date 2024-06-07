@@ -33,13 +33,15 @@ Step 1: Create a data.json file
 
 Step 2: export token and curl the endpoints
 ```
-export DATABRICKS_TOKEN=xxx
+export DATABRICKS_TOKEN=xxx                          # dapi6exxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export DATABRICKS_SERVING_URL=xxx                    # https://adb-3524775348533048.8.azuredatabricks.net/serving-endpoints/boston-housing-ab/invocations
+
 curl \
   -u token:$DATABRICKS_TOKEN \
   -X POST \
   -H "Content-Type: application/json" \
   -d@data.json \
-  https://adb-3524775348533048.8.azuredatabricks.net/serving-endpoints/boston-housing-ab/invocations
+  $DATABRICKS_SERVING_URL
 ```
 
 Expected prediction output should be one of the following depending on the model it landed on:
