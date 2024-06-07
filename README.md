@@ -44,6 +44,7 @@ curl \
   https://adb-3524775348533048.8.azuredatabricks.net/serving-endpoints/boston-housing-ab/invocations
 
 Expected prediction output should be one of the following depending on the model it landed on:
-{"predictions":[5.904833333333338]}
-{"predictions":[5.808200000000007]}
+
+model a: {"predictions":[5.808200000000007]}
+model b: {"predictions":[5.904833333333338]}
 ```
