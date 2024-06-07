@@ -42,4 +42,7 @@ curl \
   -H "Content-Type: application/json" \
   -d@data.json \
   https://adb-3524775348533048.8.azuredatabricks.net/model/boston_housing_model_b/1/invocations
+
+Expected prediction output:
+{"predictions":[4.872833333333337]}
 ```
