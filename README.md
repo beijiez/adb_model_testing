@@ -5,12 +5,8 @@ This is a repo to host testing files used for Azure Databricks model creation, p
 Link this repo with a Azure DataBricks instance, and run the notebook file
 
 # How to run
-
-```
 Step 1: Create a data.json file
-
-data.json:
-
+```
 {
   "inputs": [
     [
@@ -33,8 +29,10 @@ data.json:
     ]
   ]
 }
+```
 
 Step 2: export token and curl the endpoints
+```
 export DATABRICKS_TOKEN=xxx
 curl \
   -u token:$DATABRICKS_TOKEN \
@@ -42,9 +40,10 @@ curl \
   -H "Content-Type: application/json" \
   -d@data.json \
   https://adb-3524775348533048.8.azuredatabricks.net/serving-endpoints/boston-housing-ab/invocations
+```
 
 Expected prediction output should be one of the following depending on the model it landed on:
-
+```
 model a: {"predictions":[5.808200000000007]}
 model b: {"predictions":[5.904833333333338]}
 ```
