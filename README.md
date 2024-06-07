@@ -49,3 +49,5 @@ Expected prediction output should be one of the following depending on the model
 model a: {"predictions":[5.808200000000007]}
 model b: {"predictions":[5.904833333333338]}
 ```
+
+![img](./assets/adb-ab-serving.png)
