@@ -14,22 +14,22 @@ data.json:
 {
   "inputs": [
     [
-      0.04113,
-      25,
-      4.86,
+      0.08221,
+      22,
+      5.86,
       0,
-      0.426,
-      6.727,
-      33.5,
-      5.4007,
-      4,
-      281,
-      19,
-      396.9,
-      5.29,
-      28,
-      0.04462,
-      25
+      0.431,
+      6.957,
+      6.8,
+      8.9067,
+      7,
+      330,
+      19.1,
+      386.09,
+      3.53,
+      29.6,
+      0.36894,
+      22
     ]
   ]
 }
@@ -41,8 +41,9 @@ curl \
   -X POST \
   -H "Content-Type: application/json" \
   -d@data.json \
-  https://adb-3524775348533048.8.azuredatabricks.net/model/boston_housing_model_b/1/invocations
+  https://adb-3524775348533048.8.azuredatabricks.net/serving-endpoints/boston-housing-ab/invocations
 
-Expected prediction output:
-{"predictions":[4.872833333333337]}
+Expected prediction output should be one of the following depending on the model it landed on:
+{"predictions":[5.904833333333338]}
+{"predictions":[5.808200000000007]}
 ```
